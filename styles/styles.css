@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+@font-face {
+  font-family: medieval;
+  src: url(../libs/medieval_victoriana/mevno1.ttf);
+}
+@font-face {
+  font-family: medieval2;
+  src: url(../libs/A\ Gothique\ Time\ .ttf);
+}
+:root {
+  --oscuro1: #2C061F;
+  --oscuro2: #374045;
+  --claro1: #D89216;
+  --claro2: #E1D89F;
+}
+body {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/tauta02.jpg);
+  background-size: 100vw 100vh;
+  background-repeat:space;
+
+}
+.cuerpo, #cuerpo {
+  visibility: visible;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Vintage\ Paper\ Kraft\ Paper\ Texture\ Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  color: var(--oscuro1);
+  font-size: 20vmin;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+  "sup sup"
+  "med1 med2"
+  "inf inf";
+
+}
+.tauta{
+  grid-area: sup;
+  animation-name: rotacion;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+.escudo{
+  grid-area: sup;
+  animation-name: rotacion;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.2s;
+}
+.politica{
+  grid-area: sup;
+  animation-name: rotacion;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.8s;
+ 
+}
+.religion{
+  grid-area: sup;
+  animation-name: rotacion;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.4s;
+ 
+}
+@keyframes rotacion{
+  25%{
+    grid-area: med2;
+  }
+  50%{  
+    grid-area: inf;
+  }
+  75% {
+    grid-area: med1;;
+  }
+  100% {
+    grid-area: sup;
+  }
+}
+.inicio{
+  position: absolute;
+  font-size: 10vw;
+  margin-bottom: 4vmin;
+  font-family: medieval2;
+  text-transform: capitalize;
+}
+.inicio:hover{
+  cursor: pointer;
+  transform: scale(1.2);  
+}
+.cabecera{
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  font-size: 6vmin;
+  color: var(--oscuro1);
+  padding: 1vmin 2vmin;
+}
+.ic{
+  color: var(--claro2);
+  /* background-color: #ec9c3b56; */
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 1px black,0px 0px 10px 2px var(--oscuro1);
+}
+.icono2{
+  margin-left: auto;
+}
+.ic:hover{
+  cursor: pointer;
+  transform: translate(0, 2px);
+  transform: scale(1.2);
+  color: var(--claro1);
+}
+
+.titulo{
+  font-family: medieval, serif;
+  font-weight: 400;
+  font-style: serif;
+  font-size: 3vmin;
+  padding: 3vh 2vw;
+  display: flex;
+
+}
+.t1 { 
+  font-size: 5vmin;
+  padding:1.3vh 1.3vw;
+  border: solid 1px var(--claro1);
+  background-color: var(--claro1);
+  color: var(--claro2)
+}.t2 {
+  font-size: 5vmin;
+  padding: 1vmin 2vmin;
+  border: solid 1px var(--claro2);
+  color: var(--claro2)
+}
+.t1:hover,.t2:hover{
+  cursor: pointer;
+  transform: translate(0, 2px);
+
+  
+}
+.pie{
+  position: relative;
+  margin-top: auto;
+}
+.navegacion {
+  position: absolute;
+  top: 0;
+  z-index: 80;
+  display: flex;
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.493);
+  text-align: center;
+  animation-name: aparecer;
+  animation-duration: 2s;
+}
+@keyframes aparecer{
+  0%{
+   opacity: 0;
+  }
+  80% {
+    opacity: 0.9;
+  }
+}
+.nav-principal{
+  margin: auto;
+  align-items: center;
+  font-size: 2.5vmin;
+  padding: 3vmin;
+  
+}
+.botones-nav li{
+  background-color: var(--oscuro2);
+  margin-top: 6vmin;
+  padding: 3.5vmin 5vmin;
+  color:  var(--claro1);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  border-radius: 2vmin;
+  box-shadow: inset -5px -5px 15px black, 2px 2px 3px 2px rgba(0, 0, 0, 0.459);
+}
+.botones-nav li:hover{
+  transform: translate(0px, -5px);
+  background-color: var(--oscuro1);
+}
+.cerrar{
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: var(--claro1);
+  border-radius: 50%;
+  color: var(--oscuro1);
+  font-size: 6vmin;
+  margin-left: 8vmin;
+  box-shadow: 0px 0px 5px 2px var(--oscuro1);
+}
+.cerrar:hover, .cerrar2:hover{
+  cursor: pointer;
+  color: var(--oscuro2);
+  transform: scale(1.2);
+}
+.barraIzquierda{
+  z-index: 70;
+  display: none;
+  position:absolute;
+  top: 0;
+  background-image: url(../images/parchment\ Free\ Stock\ Photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 40vmin;
+  animation-name: aparecer;
+  animation-duration: 2s;
+}
+.selector{
+  position: relative;
+  text-align: center;
+  height: 90%;
+  margin-top: 10%;
+}
+.ico-selector{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  font-size: 15vmin;
+  padding-top: 10%;
+  color: var(--oscuro1);
+}
+.cerrar2{
+  position: absolute;
+  top: 0%;
+  right: 4%;
+  background-color: var(--claro1);
+  border-radius: 50%;
+  font-size: 5.2vmin;
+  color: var(--oscuro1);
+  box-shadow: 0px 0px 5px 2px var(--oscuro1);
+  }
+.ico-selector:hover{
+  color: var(--claro1);
+  transform: translate(0px, -5px);
+}
+.articulo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 65%;
+  height: 20vmin;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4vmin;
+  color: var(--claro2);
+  overflow: auto;
+  font-family: 'Hind Madurai', sans-serif;
+  font-weight:400;
+  padding: 1vmin, 2vmin;
+  text-align: justify;
+}
+p{
+  width: 90%;
+  margin: auto;
+}

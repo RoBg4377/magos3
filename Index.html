@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="libs/icoRBG-v1.0/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<script>
+  function cerrar() {
+  document.getElementById('cuerpo').style.visibility = 'hidden';
+}
+</script>
+<body>
+  <div class="cuerpo" id="cuerpo">
+    <div class="tauta"><span class="ico ico-tauta2"></span></div>
+    <div class="escudo"><span class="ico ico-escudo2"></span></div>
+    <div class="politica"><span class="ico ico-plitica2"></span></div>
+    <div class="religion"><span class="ico ico-religion2"></span></div>
+    <div type="button" class="inicio" onclick="cerrar();">Entrar</div>
+  </div>
+    <header class="cabecera">
+      <span class="ico ico-castillo icono ic" type="button" onclick="abrirBarra();"></span>
+      <h1 class="titulo">
+      <div onclick="document.getElementById('player').play()"class="t1">Historias de</div><div onclick="document.getElementById('player').pause()" class="t2">Tautaquelonde</div>
+      </h1>
+      <span class="ico ico-menu icono2 ic" type="button" onclick="abrirMenu();"></span>
+    </header>
+    <div class="navegacion" id="navegacion"> 
+      <nav class="nav-principal" > 
+        <div class="ico ico-escudo cerrar" type="button" onclick="cerrarMenu();"></div>
+        <ul class="nav">
+          <div class="botones-nav">     
+            <a href="tautauqlond.html" class="boton-individual"><li>TAUTAQUELONDE</li></a>
+            <a href="magos.html"  class="boton-individual"><li>MAGOS</li></a>
+            <a href="bestiario.html"  class="boton-individual"><li>BESTIARIO</li></a>
+            <a href="poesia.html"  class="boton-individual"><li>POESIA</li></a>
+            <a href="iniciarte.html"  class="boton-individual"><li>INICIARTE</li></a>
+          </div> 
+        </ul>        
+      </nav>
+    </div>
+    <div class="barraIzquierda" id="barra">
+      <div class="selector">
+        <div class="cerrar-2"><spam class="ico ico-escudo cerrar2" type="button" onclick="cerrarBarra();" ></spam></div>
+        <div class="ico-selector"><span class="ico ico-menu"></span></div>
+        <div class="ico-selector"><span class="ico ico-tauta"></span></div>
+        <div class="ico-selector"><span class="ico ico-rligion"></span></div>
+        <div class="ico-selector"><span class="ico ico-plitica"></span></div>
+      </div>
+    </div>
+    <section>
+      <div class="articulo">
+      <article>
+          <p>Según muestra los registros, Tautaquelonde fue un territorio ubicado en la parte más austral y continental de Arcania.</p>
+          <p>En él se establecieron diferentes dinastías que lucharon por el poder y es donde hubo seres con artes misteriosas que los táutalos llamaron magos y hechiceras. También se cuenta que hubo criaturas extrañas en los rincones lejanos de los bosques, ríos, lagos y montañas.</p>
+          <p>Esta página es un recopilatorio de los documentos que llegaron a nuestros días y trata de reconstruir para los interesados, la historia, la cultura y el aspecto de este mundo y sus habitantes.
+          Saludos a todos los curiosos. Recorran junto a nosotros estas hermosas tierras.</p>
+      </article>
+      </div>
+    </section>
+    <script>
+      
+      function abrirBarra() {
+      document.getElementById('barra').style.display = 'block';
+    }
+    function cerrarBarra() {
+      document.getElementById('barra').style.display = 'none';
+    }
+    function abrirMenu() {
+      document.getElementById('navegacion').style.display = 'flex';
+    }
+    function cerrarMenu() {
+      document.getElementById('navegacion').style.display = 'none';
+    }
+    </script>
+    <footer>
+      <audio loop autoplay id="player">
+        <source src="audio/cancion02.mp3" type="audio/mp3" >
+      </audio>
+      <h4 class="pie"></h4>
+    </footer>
+
+</body>
+</html>
